@@ -3,7 +3,10 @@
 
 Configuration files to automatically set up a basic and customizable Vagrant box
 with the required tools to develop Rails projects oriented to be deployed over
-the [Heroku][10] platform.
+the [Heroku][10].
+
+Therefore, the software versions installed try to match those supported on the
+Heroku platform.
 
 
 ## Usage
@@ -27,18 +30,20 @@ a better option is to use [SSHF][2] or [NFS][3].
 
 ## Included Software
 
-* **[Ubuntu Xenial][4]** (with Development Tools): This Linux distribution is
-  closer to the one used on the Heroku-16 stack.
+* **[Ubuntu Xenial][4]**: This Linux distribution is closer to the one used on
+  the Heroku-16 stack.
 
-* **Ruby 2.3 (with [RVM][5])**: Programming language that supports the Rails
+* **Ruby 2.4.x (with [RVM][5])**: Programming language that supports the Rails
   framework. The Ruby Version Manager allows to easily use different Ruby
   versions and gems per project.
 
-* **[Node.js][6]**: Server side JavaScript runtime.
+* **[Rails 5.1.x][11]**: And other gems to aid the development of web apps.
 
-* **[Postgres][7]**: Advanced SQL database.
+* **[Node.js 8.2.x][6]**: Server side JavaScript runtime.
 
-* **[Redis][8]**: In-memory data structure store.
+* **[Postgres 9.5][7]**: Advanced SQL database.
+
+* **[Redis 3.0.x][8]**: In-memory data structure store.
 
 * **[Heroku CLI][9]**: Tool for creating and managing Heroku apps from the
   the command line.
@@ -55,3 +60,4 @@ a better option is to use [SSHF][2] or [NFS][3].
 [8]: https://redis.io/
 [9]: https://devcenter.heroku.com/articles/heroku-cli
 [10]: https://www.heroku.com/
+[11]: http://weblog.rubyonrails.org/2017/4/27/Rails-5-1-final/
