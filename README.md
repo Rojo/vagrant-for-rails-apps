@@ -16,7 +16,8 @@ Heroku platform.
 2.- Tweak the provider and options in the `Vagrantfile`.
 3.- Run `vagrant up` and wait for the machine to be built.
 4.- When the machine is ready, run `vagrant ssh` and `cd /vagrant`.
-5.- ...
+5.- You may now start a new Rails project with `rails new .` or adjust the Ruby
+    and gems settings with RVM to match an existent code base.
 
 
 ## Prerequisites
@@ -47,6 +48,8 @@ a better option is to use [SSHF][2] or [NFS][3].
 
 * **[Heroku CLI][9]**: Tool for creating and managing Heroku apps from the
   the command line.
+
+* **ZSH Shell (With Oh-My-Zsh!)**
 
 ---
 [0]: https://serverless.com/
