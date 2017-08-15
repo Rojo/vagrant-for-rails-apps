@@ -11,13 +11,13 @@ Heroku platform.
 
 ## Usage
 
-0.- Install in your computer the software listed the prerequisites section.
-1.- Clone the repository into your machine.
-2.- Tweak the provider and options in the `Vagrantfile`.
-3.- Run `vagrant up` and wait for the machine to be built.
-4.- When the machine is ready, run `vagrant ssh` and `cd /vagrant`.
-5.- You may now start a new Rails project with `rails new .` or adjust the Ruby
-    and gems settings with RVM to match an existent code base.
+0. Install in your computer the software listed the prerequisites section.
+1. Clone the repository into your machine.
+2. Tweak the provider and options in the `Vagrantfile`.
+3. Run `vagrant up` and wait for the machine to be built.
+4. When the machine is ready, run `vagrant ssh` and `cd /vagrant`.
+5. You may now start a new Rails project with `rails new .` or adjust the Ruby
+   and gems settings with RVM to match an existent code base.
 
 
 ## Prerequisites
@@ -29,7 +29,7 @@ If you experience notice that delays on the synchronization of shared folders,
 a better option is to use [SSHF][2] or [NFS][3].
 
 
-## Included Software
+## Out of the Box Included Software
 
 * **[Ubuntu Xenial][4]**: This Linux distribution is closer to the one used on
   the Heroku-16 stack.
