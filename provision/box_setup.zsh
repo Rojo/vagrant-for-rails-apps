@@ -33,6 +33,7 @@ else
   echo 'OK'
 fi
 
+
 # Ruby and Version Manager ####################################################
 
 echo "***************************************************"
@@ -44,12 +45,12 @@ if ! ruby -v; then
   \curl -sSL https://get.rvm.io | bash
   source /home/ubuntu/.rvm/scripts/rvm
   rvm get head
-  rvm install ruby-2
-  rvm use ruby-2@global
+  rvm install ruby-2.4.1
+  rvm use ruby-2.4.1@global
   gem update --system
   gem update
   gem install bundler rails rspec-rails cucumber-rails pg redis-rails
-  rvm use ruby-2 --default
+  rvm use ruby-2.4.1 --default
   sudo apt-get autoremove
 else
   echo 'OK'
