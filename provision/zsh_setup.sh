@@ -26,6 +26,15 @@ if ! dpkg -s zsh; then
   echo 'source ~/.profile'  >> ~/.zshrc
   echo ' '  >> ~/.zshrc
 
+    # Get Antigen plugin manager
+  curl -L git.io/antigen > ~/antigen.zsh
+
+  # Include into .profile settings
+  echo ' '  >> ~/.profile
+  echo '# Load Antigen'  >> ~/.profile
+  echo 'source ~/antigen.zsh'  >> ~/.profile
+  echo ' '  >> ~/.profile
+
   # Change shell to Zsh for the ubuntu user
   sudo chsh -s /bin/zsh ubuntu
 fi
