@@ -27,8 +27,8 @@ echo "***************************************************"
 echo "Checking for Node.js... "
 echo "***************************************************"
 if ! node --version; then
-  nvm install 8.2
-  nvm use 8.2
+  nvm install 6.11
+  nvm use 6.11
 else
   echo 'OK'
 fi
@@ -100,6 +100,7 @@ if ! heroku --version; then
 else
   echo 'OK'
 fi
+
 
 # Install Yarn package manager ################################################
 
