@@ -47,9 +47,9 @@ if ! ruby -v; then
   rvm get head
   rvm install ruby-2.4.1
   rvm use ruby-2.4.1@global
-  gem update --system
-  gem update
-  gem install bundler rails rspec-rails cucumber-rails pg redis-rails
+  gem update --system --no-ri --no-rdoc
+  gem update --no-ri --no-rdoc
+  gem install bundler rails rspec-rails cucumber-rails pg redis-rails webpacker  --no-ri --no-rdoc
   rvm use ruby-2.4.1 --default
   sudo apt-get autoremove
 else
@@ -110,5 +110,5 @@ echo "***************************************************"
 if ! dpkg -s yarn; then
  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
- sudo apt-get update && sudo apt-get install yarn
+ sudo apt-get update && sudo apt-get install -y yarn
 fi
