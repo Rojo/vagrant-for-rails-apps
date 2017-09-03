@@ -40,7 +40,9 @@ a better option is to use [SSHF][2] or [NFS][3].
 
 * **[Rails 5.1.x][11]**: And other gems to aid the development of web apps.
 
-* **[Node.js 8.2.x][6]**: Server side JavaScript runtime.
+* **[Yarn][12] and [Webpacker][13]**: For Rails projects with heavy use of JavaScript.
+
+* **[Node.js 6.11.x][6]**: Server side JavaScript runtime.
 
 * **[Postgres 9.5][7]**: Advanced SQL database.
 
@@ -49,7 +51,8 @@ a better option is to use [SSHF][2] or [NFS][3].
 * **[Heroku CLI][9]**: Tool for creating and managing Heroku apps from the
   the command line.
 
-* **ZSH Shell (With Oh-My-Zsh!)**
+* **ZSH Shell (With [Oh-My-Zsh!][14] and Antigen)** Tools to improve experience of
+  working with the shell.
 
 ---
 [0]: https://serverless.com/
@@ -64,3 +67,6 @@ a better option is to use [SSHF][2] or [NFS][3].
 [9]: https://devcenter.heroku.com/articles/heroku-cli
 [10]: https://www.heroku.com/
 [11]: http://weblog.rubyonrails.org/2017/4/27/Rails-5-1-final/
+[12]: https://yarnpkg.com/
+[13]: https://github.com/rails/webpacker
+[14]: http://ohmyz.sh/
