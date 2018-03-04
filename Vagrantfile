@@ -9,7 +9,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Forward ports
   [
     3000, # Rails Puma
-    4040  # ngrok web ui
+    5432, # Postgres
+    1080, # Mailcatcher web ui
+    4040  # Ngrok web ui
   ].each do |p|
     config.vm.network :forwarded_port, guest: p, host: p
   end

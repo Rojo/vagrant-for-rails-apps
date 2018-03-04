@@ -113,7 +113,7 @@ if ! ruby -v; then
   rvm use ruby-2.5.0@global
   gem update --system --no-ri --no-rdoc
   gem update --no-ri --no-rdoc
-  gem install bundler rails rspec-rails cucumber-rails pg redis-rails webpacker --no-ri --no-rdoc
+  gem install bundler rails rspec-rails cucumber-rails pg redis-rails webpacker mailcatcher pry-byebug --no-ri --no-rdoc
   rvm use ruby-2.5.0 --default
   sudo apt-get autoremove
 else
