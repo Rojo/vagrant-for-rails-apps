@@ -3,7 +3,7 @@
 
 Configuration files to automatically set up a basic and customizable Vagrant box
 with the required tools to develop Rails projects oriented to be deployed over
-the [Heroku][10].
+[Heroku][10].
 
 Therefore, the software versions installed try to match those supported on the
 Heroku platform.
@@ -39,7 +39,15 @@ a better option is to use [SSHF][2] or [NFS][3].
   versions and gems per project.
 
 * **[Rails][11]**: And other gems to aid the development of web apps. (Current
-  gem distribution).
+  gem distributions).
+  - RSpec
+  - Cucumber
+  - Mailcatcher
+  - Pry-Byebug
+  - PG
+  - Redis-Rails
+  - Webpacker
+  - Bundler
 
 * **[Yarn][12] and [Webpacker][13]**: For Rails projects with heavy use of
   JavaScript.
@@ -53,7 +61,10 @@ a better option is to use [SSHF][2] or [NFS][3].
 * **[Heroku CLI][9]**: Tool for creating and managing Heroku apps from the
   command line.
 
-* **ZSH Shell (With [Oh-My-Zsh!][14])** Tools to improve experience of
+* **[Ngrok][15]**: Exposes local servers behind NATs and firewalls to the public
+  internet over secure tunnels.
+
+* **ZSH Shell (With [Oh-My-Zsh!][14])** Tools to improve the experience of
   working with the shell.
 
 ---
@@ -72,3 +83,4 @@ a better option is to use [SSHF][2] or [NFS][3].
 [12]: https://yarnpkg.com/
 [13]: https://github.com/rails/webpacker
 [14]: http://ohmyz.sh/
+[15]: https://ngrok.com/
