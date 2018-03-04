@@ -90,7 +90,7 @@ echo "***************************************************"
 echo "Checking for Node.js... "
 echo "***************************************************"
 if ! node --version; then
-  nvm install default
+  nvm install stable
   nvm alias default stable
   nvm use default
 else
