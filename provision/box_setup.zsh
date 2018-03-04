@@ -107,7 +107,7 @@ if ! ruby -v; then
   gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
   sudo apt-get install -y libxml2 libxml2-dev libxslt1-dev libpq-dev
   \curl -sSL https://get.rvm.io | bash
-  source /home/vagrant/.rvm/scripts/rvm
+  source $HOME/.rvm/scripts/rvm
   rvm get head
   rvm install ruby-2.5.0
   rvm use ruby-2.5.0@global
@@ -143,3 +143,12 @@ if ! dpkg -s yarn; then
  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
  sudo apt-get update && sudo apt-get install -y yarn
 fi
+
+
+# Cleaning up #################################################################
+
+echo "***************************************************"
+echo 'Removing unused software... '
+echo "***************************************************"
+rvm cleanup all
+sudo apt autoremove -y
