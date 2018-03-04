@@ -145,6 +145,21 @@ if ! dpkg -s yarn; then
 fi
 
 
+# Install Ngrok exposer ######################################################
+
+echo "***************************************************"
+echo "Checking for Ngrok... "
+echo "***************************************************"
+if ! ngrok; then
+  sudo apt install -y unzip
+  wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+  sudo unzip ngrok-stable-linux-amd64.zip -d /usr/local/bin
+  rm -rf ngrok-stable-linux-amd64.zip
+else
+  echo "OK"
+fi
+
+
 # Cleaning up #################################################################
 
 echo "***************************************************"
