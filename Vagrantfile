@@ -28,5 +28,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "shell", privileged: false, run: "once",
     path: "provision/zsh_setup.sh"
   config.vm.provision "shell", privileged: false, run: "once",
-    path: "provision/box_setup.zsh"
+    path: "provision/box_setup.zsh",
+    env: {
+      "LC_ALL"   => "en_US.UTF-8",
+      "LANG"     => "en_US.UTF-8",
+      "LANGUAGE" => "en_US.UTF-8",
+    }
 end
