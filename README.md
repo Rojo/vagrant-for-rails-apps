@@ -3,7 +3,7 @@
 
 Configuration files to automatically set up a basic and customizable Vagrant box
 with the required tools to develop Rails projects oriented to be deployed over
-the [Heroku][10].
+[Heroku][10].
 
 Therefore, the software versions installed try to match those supported on the
 Heroku platform.
@@ -14,7 +14,7 @@ Heroku platform.
 0. Install in your computer the software listed the prerequisites section.
 1. Clone the repository into your machine.
 2. Tweak the provider and options in the `Vagrantfile`.
-3. Run `vagrant up` and wait for the machine to be built.
+3. Run `vagrant up` and wait for the machine to be built, then `vagrant reload`.
 4. When the machine is ready, run `vagrant ssh` and `cd /vagrant`.
 5. You may now start a new Rails project with `rails new .` or adjust the Ruby
    and gems settings with RVM to match an existent code base.
@@ -34,24 +34,37 @@ a better option is to use [SSHF][2] or [NFS][3].
 * **[Ubuntu Xenial][4]**: This Linux distribution is closer to the one used on
   the Heroku-16 stack.
 
-* **Ruby 2.4.x (with [RVM][5])**: Programming language that supports the Rails
+* **Ruby 2.5.0 (with [RVM][5])**: Programming language that supports the Rails
   framework. The Ruby Version Manager allows to easily use different Ruby
   versions and gems per project.
 
-* **[Rails 5.1.x][11]**: And other gems to aid the development of web apps.
+* **[Rails][11]**: And other gems to aid the development of web apps. (Current
+  gem distributions).
+  - RSpec
+  - Cucumber
+  - Mailcatcher
+  - Pry-Byebug
+  - PG
+  - Redis-Rails
+  - Webpacker
+  - Bundler
 
-* **[Yarn][12] and [Webpacker][13]**: For Rails projects with heavy use of JavaScript.
+* **[Yarn][12] and [Webpacker][13]**: For Rails projects with heavy use of
+  JavaScript.
 
-* **[Node.js 6.11.x][6]**: Server side JavaScript runtime.
+* **[Node.js][6]**: Server side JavaScript runtime. (Current stable version).
 
-* **[Postgres 9.5][7]**: Advanced SQL database.
+* **[Postgres][7]**: Advanced SQL database. (Current Xenial distribution).
 
-* **[Redis 3.0.x][8]**: In-memory data structure store.
+* **[Redis][8]**: In-memory data structure store. (Current Xenial distribution).
 
 * **[Heroku CLI][9]**: Tool for creating and managing Heroku apps from the
-  the command line.
+  command line.
 
-* **ZSH Shell (With [Oh-My-Zsh!][14] and Antigen)** Tools to improve experience of
+* **[Ngrok][15]**: Exposes local servers behind NATs and firewalls to the public
+  internet over secure tunnels.
+
+* **ZSH Shell (With [Oh-My-Zsh!][14])** Tools to improve the experience of
   working with the shell.
 
 ---
@@ -70,3 +83,4 @@ a better option is to use [SSHF][2] or [NFS][3].
 [12]: https://yarnpkg.com/
 [13]: https://github.com/rails/webpacker
 [14]: http://ohmyz.sh/
+[15]: https://ngrok.com/

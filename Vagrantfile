@@ -7,8 +7,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define 'rails-apps-box'
 
   # Forward ports
-  # 3000 - Rails Puma
-  [3000].each do |p|
+  [
+    3000, # Rails Puma
+    5432, # Postgres
+    1080, # Mailcatcher web ui
+    4040  # Ngrok web ui
+  ].each do |p|
     config.vm.network :forwarded_port, guest: p, host: p
   end
 
@@ -18,17 +22,19 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ['modifyvm', :id, '--memory', '1536']
   end
 
-  ## If you are using Windows o Linux with an encrypted volume
+  # If you are using Windows or Linux (with an encrypted volume) stick with the
+  # virtualbox syncronization. Unencrypted Linux and OSX can can get a better
+  # file read/write performance by using SSHF or NFS.
   config.vm.synced_folder '.', '/vagrant', type: 'virtualbox'
 
-  ## If you're using OS X or Linux (not encrypted)
-  ## NFS improves speed of VM if supported by your OS
-  # config.vm.network 'private_network', ip: '192.168.50.4'
-  # config.vm.synced_folder '.', '/vagrant', type: 'nfs'
-
   # Provision box
-  config.vm.provision "shell", privileged: false, run: "always",
+  config.vm.provision "shell", privileged: false, run: "once",
     path: "provision/zsh_setup.sh"
-  config.vm.provision "shell", privileged: false, run: "always",
-    path: "provision/box_setup.zsh"
+  config.vm.provision "shell", privileged: false, run: "once",
+    path: "provision/box_setup.zsh",
+    env: {
+      "LC_ALL"   => "en_US.UTF-8",
+      "LANG"     => "en_US.UTF-8",
+      "LANGUAGE" => "en_US.UTF-8",
+    }
 end

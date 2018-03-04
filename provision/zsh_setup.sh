@@ -1,12 +1,17 @@
 #!/usr/bin/env bash
 
 echo "***************************************************"
+echo 'Updating system packages... '
+echo "***************************************************"
+sudo apt update && sudo apt upgrade -y
+
+
+echo "***************************************************"
 echo 'Checking Zsh installation... '
 echo "***************************************************"
 if ! dpkg -s zsh; then
   # Install and set Zsh as shell
-  sudo apt-get update && sudo apt-get upgrade -y
-  sudo apt-get install -y zsh
+  sudo apt install -y zsh
 
   # Install Oh-My-Zsh!
   git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
@@ -26,15 +31,6 @@ if ! dpkg -s zsh; then
   echo 'source ~/.profile'  >> ~/.zshrc
   echo ' '  >> ~/.zshrc
 
-    # Get Antigen plugin manager
-  curl -L git.io/antigen > ~/antigen.zsh
-
-  # Include into .profile settings
-  echo ' '  >> ~/.profile
-  echo '# Load Antigen'  >> ~/.profile
-  echo 'source ~/antigen.zsh'  >> ~/.profile
-  echo ' '  >> ~/.profile
-
-  # Change shell to Zsh for the ubuntu user
-  sudo chsh -s /bin/zsh ubuntu
+  # Change shell to Zsh for the vagrant user
+  sudo chsh -s /bin/zsh vagrant
 fi
