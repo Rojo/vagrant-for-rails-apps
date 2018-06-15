@@ -1,19 +1,27 @@
 #!/usr/bin/env bash
 
-echo "***************************************************"
-echo 'Updating system packages... '
-echo "***************************************************"
-sudo apt update && sudo apt upgrade -y
+###
+# Update system packages and install basic utilities
+update_box() {
+  echo "Updating box software"
+  sudo apt update && sudo apt upgrade -y
+  sudo apt install -y tree git curl wget
+}
 
-
-echo "***************************************************"
-echo 'Checking Zsh installation... '
-echo "***************************************************"
-if ! dpkg -s zsh; then
-  # Install and set Zsh as shell
+###
+# Install Zsh and set it as the default shell
+install_zsh() {
+  echo "Installing Zsh"
   sudo apt install -y zsh
 
-  # Install Oh-My-Zsh!
+  # Change shell to Zsh for the vagrant user
+  sudo chsh -s /bin/zsh vagrant
+}
+
+##
+# Install Oh-My-Zsh! framework for Zsh configuration
+install_ohmyzsh() {
+  echo "Installing Oh-My-Zsh!"
   git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
   cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
@@ -26,11 +34,14 @@ if ! dpkg -s zsh; then
   sed -i 's/plugins=(git)/plugins=(git dirhistory common-aliases command-not-found ruby)/g' ~/.zshrc
 
   # Include .profile settings
-  echo ' '  >> ~/.zshrc
-  echo '# Include .profile settings'  >> ~/.zshrc
-  echo 'source ~/.profile'  >> ~/.zshrc
-  echo ' '  >> ~/.zshrc
+  echo -e "\n# Include .profile settings"  >> ~/.zshrc
+  echo -e "source ~/.profile\n"  >> ~/.zshrc
+}
 
-  # Change shell to Zsh for the vagrant user
-  sudo chsh -s /bin/zsh vagrant
-fi
+setup() {
+  update_box
+  install_zsh
+  install_ohmyzsh
+}
+
+setup "$@"
