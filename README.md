@@ -1,12 +1,8 @@
 
-# Rails-Heroku Development Environment on Vagrant
+# Rails Virtual Development Environment on Vagrant
 
 Configuration files to automatically set up a basic and customizable Vagrant box
-with the required tools to develop Rails projects oriented to be deployed over
-[Heroku][10].
-
-Therefore, the software versions installed try to match those supported on the
-Heroku platform.
+with the required tools to develop Rails projects.
 
 
 ## Usage
@@ -34,7 +30,7 @@ a better option is to use [SSHF][2] or [NFS][3].
 * **[Ubuntu Xenial][4]**: This Linux distribution is closer to the one used on
   the Heroku-16 stack.
 
-* **Ruby 2.5.0 (with [RVM][5])**: Programming language that supports the Rails
+* **Ruby 2.5.x (with [RVM][5])**: Programming language that supports the Rails
   framework. The Ruby Version Manager allows to easily use different Ruby
   versions and gems per project.
 
@@ -58,8 +54,7 @@ a better option is to use [SSHF][2] or [NFS][3].
 
 * **[Redis][8]**: In-memory data structure store. (Current Xenial distribution).
 
-* **[Heroku CLI][9]**: Tool for creating and managing Heroku apps from the
-  command line.
+* **[Heroku CLI][9]**: Creating and managing Heroku apps from the command line.
 
 * **[Ngrok][15]**: Exposes local servers behind NATs and firewalls to the public
   internet over secure tunnels.
