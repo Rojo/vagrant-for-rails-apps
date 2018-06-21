@@ -1,6 +1,9 @@
 
 # Entorno virtual de desarollo para Rails en Vagrant
 
+[English][en] |
+------------- |
+
 Archivos de configuración para construir automaticamente una maquina virtual flexible con las herramientas básicas para desarrollar proyectos con el framework Rails.
 
 
@@ -69,3 +72,4 @@ Si experimentas retrasos en la sincronización de archivos con `virtualbox` como
 [13]: https://github.com/rails/webpacker
 [14]: http://ohmyz.sh/
 [15]: https://ngrok.com/
+[en]: ../README.md

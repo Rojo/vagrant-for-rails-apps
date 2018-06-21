@@ -1,6 +1,10 @@
 
 # Rails Virtual Development Environment on Vagrant
 
+
+[Español][es] |
+------------- |
+
 Configuration files to automatically set up a basic and customizable Vagrant box with the required tools to develop Rails projects.
 
 
@@ -53,8 +57,8 @@ If you notice that there are delays with the synchronization of shared folders w
 * **ZSH Shell (With [Oh-My-Zsh!][14])** Tools to improve the experience of working with the shell.
 
 ---
-[0]:
-[1]: https://www.vagrantup.com/downloads.html
+[0]: https://www.vagrantup.com/downloads.html
+[1]: https://www.virtualbox.org/wiki/Downloads
 [2]: https://fedoramagazine.org/vagrant-sharing-folders-vagrant-sshfs/
 [3]: https://www.vagrantup.com/docs/synced-folders/nfs.html
 [4]: https://app.vagrantup.com/ubuntu/boxes/xenial64
@@ -69,3 +73,4 @@ If you notice that there are delays with the synchronization of shared folders w
 [13]: https://github.com/rails/webpacker
 [14]: http://ohmyz.sh/
 [15]: https://ngrok.com/
+[es]: lang/README.es.md
