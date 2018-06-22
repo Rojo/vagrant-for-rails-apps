@@ -28,7 +28,7 @@ If you notice that there are delays with the synchronization of shared folders w
 
 ## Out of the Box Included Software
 
-* **[Ubuntu Xenial][4]**: This Linux distribution is closer to the one used on the Heroku-16 stack.
+* **[Ubuntu Bionic][4]**: This Linux distribution is closer to the one used on the Heroku-18 stack.
 
 * **Ruby 2.5.x (with [RVM][5])**: Programming language that supports the Rails framework. The Ruby Version Manager allows to easily use different Ruby versions and gems per project.
 
@@ -46,9 +46,9 @@ If you notice that there are delays with the synchronization of shared folders w
 
 * **[Node.js][6]**: Server side JavaScript runtime. (Current stable version).
 
-* **[Postgres][7]**: Advanced SQL database. (Current Xenial distribution).
+* **[Postgres][7]**: Advanced SQL database. (Current Bionic distribution).
 
-* **[Redis][8]**: In-memory data structure store. (Current Xenial distribution).
+* **[Redis][8]**: In-memory data structure store. (Current Bionic distribution).
 
 * **[Heroku CLI][9]**: Create and manage Heroku apps from the command line.
 
@@ -61,14 +61,14 @@ If you notice that there are delays with the synchronization of shared folders w
 [1]: https://www.virtualbox.org/wiki/Downloads
 [2]: https://fedoramagazine.org/vagrant-sharing-folders-vagrant-sshfs/
 [3]: https://www.vagrantup.com/docs/synced-folders/nfs.html
-[4]: https://app.vagrantup.com/ubuntu/boxes/xenial64
+[4]: https://app.vagrantup.com/ubuntu/boxes/bionic64
 [5]: https://rvm.io/
 [6]: https://nodejs.org/en/
 [7]: https://www.postgresql.org/
 [8]: https://redis.io/
 [9]: https://devcenter.heroku.com/articles/heroku-cli
 [10]: https://www.heroku.com/
-[11]: http://weblog.rubyonrails.org/2017/4/27/Rails-5-1-final/
+[11]: https://rubyonrails.org/
 [12]: https://yarnpkg.com/
 [13]: https://github.com/rails/webpacker
 [14]: http://ohmyz.sh/
