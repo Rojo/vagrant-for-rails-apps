@@ -27,7 +27,7 @@ Si experimentas retrasos en la sincronización de archivos con `virtualbox` como
 
 ## Software incluido
 
-* **[Ubuntu Xenial][4]**: Ésta distribución de Linux es la más cercana a la utilizada en el stack Heroku-16.
+* **[Ubuntu Bionic][4]**: Ésta distribución de Linux es la más cercana a la utilizada en el stack Heroku-18.
 
 * **Ruby 2.5.x (con [RVM][5])**: Lenguaje de programación que soporta al framework Rails. El administrador de versiones de Ruby permite usar diferentes versiones y grupos de gemas por proyecto.
 
@@ -45,9 +45,9 @@ Si experimentas retrasos en la sincronización de archivos con `virtualbox` como
 
 * **[Node.js][6]**: Motor de ejecición para JavaScript del lado del servidor. (Versión estable más reciente).
 
-* **[Postgres][7]**: Manejador avanzado de bases de datos relacionales. (Distribución de Xenial).
+* **[Postgres][7]**: Manejador avanzado de bases de datos relacionales. (Distribución de Bionic).
 
-* **[Redis][8]**: Almacenamiento de estructura de datos en memoria. (Distribución de Xenial).
+* **[Redis][8]**: Almacenamiento de estructura de datos en memoria. (Distribución de Bionic).
 
 * **[Heroku CLI][9]**: Crea y maneja applicaciones en Heroku desde la terminal.
 
@@ -60,14 +60,14 @@ Si experimentas retrasos en la sincronización de archivos con `virtualbox` como
 [1]: https://www.virtualbox.org/wiki/Downloads
 [2]: https://fedoramagazine.org/vagrant-sharing-folders-vagrant-sshfs/
 [3]: https://www.vagrantup.com/docs/synced-folders/nfs.html
-[4]: https://app.vagrantup.com/ubuntu/boxes/xenial64
+[4]: https://app.vagrantup.com/ubuntu/boxes/bionic64
 [5]: https://rvm.io/
 [6]: https://nodejs.org/en/
 [7]: https://www.postgresql.org/
 [8]: https://redis.io/
 [9]: https://devcenter.heroku.com/articles/heroku-cli
 [10]: https://www.heroku.com/
-[11]: http://weblog.rubyonrails.org/2017/4/27/Rails-5-1-final/
+[11]: https://rubyonrails.org/
 [12]: https://yarnpkg.com/
 [13]: https://github.com/rails/webpacker
 [14]: http://ohmyz.sh/
